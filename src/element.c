@@ -19,7 +19,7 @@ bool less(element a, element b) {
     return a < b;
 }
 
-void print_info(element* array, int n) {
+void array_print(element* array, int n) {
     printf("Array: { ");
     for (int i = 0; i < n; i++) {
         printf("%i ", array[i]);

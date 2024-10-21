@@ -1,12 +1,11 @@
 #include "linked_list.h"
+#include "sorting.h"
+#include "element.h"
 
 int main() {
-    linked_list list = linked_list_create();
-    list = linked_list_add(2, list);
-    list = linked_list_add(3, list);
-
-    linked_list_print(list);
-    linked_list_search(7, list);
-
+    element array[] = { 2, 5, 6, 10, 21 };
+    insertion_sort(array, 5);
+    array_print(array, 5);
+    
     return 0;
 }
