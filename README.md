@@ -1,1 +1,3 @@
-cool content here
+### Features:
+- linked lists
+- sorting algorithms (soon)
