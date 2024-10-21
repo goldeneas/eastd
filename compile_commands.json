@@ -1,0 +1,32 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-Isrc",
+      "-o",
+      "target/main",
+      "src/linked_list.c"
+    ],
+    "directory": "/Users/nicola/Workspace/C/eastd",
+    "file": "/Users/nicola/Workspace/C/eastd/src/linked_list.c",
+    "output": "/Users/nicola/Workspace/C/eastd/target/main"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-Isrc",
+      "-o",
+      "target/main",
+      "src/main.c"
+    ],
+    "directory": "/Users/nicola/Workspace/C/eastd",
+    "file": "/Users/nicola/Workspace/C/eastd/src/main.c",
+    "output": "/Users/nicola/Workspace/C/eastd/target/main"
+  }
+]
