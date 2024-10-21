@@ -8,6 +8,21 @@
       "-Isrc",
       "-o",
       "target/main",
+      "src/element.c"
+    ],
+    "directory": "/Users/nicola/Workspace/C/eastd",
+    "file": "/Users/nicola/Workspace/C/eastd/src/element.c",
+    "output": "/Users/nicola/Workspace/C/eastd/target/main"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-Isrc",
+      "-o",
+      "target/main",
       "src/linked_list.c"
     ],
     "directory": "/Users/nicola/Workspace/C/eastd",
@@ -27,6 +42,21 @@
     ],
     "directory": "/Users/nicola/Workspace/C/eastd",
     "file": "/Users/nicola/Workspace/C/eastd/src/main.c",
+    "output": "/Users/nicola/Workspace/C/eastd/target/main"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-Isrc",
+      "-o",
+      "target/main",
+      "src/sorting.c"
+    ],
+    "directory": "/Users/nicola/Workspace/C/eastd",
+    "file": "/Users/nicola/Workspace/C/eastd/src/sorting.c",
     "output": "/Users/nicola/Workspace/C/eastd/target/main"
   }
 ]
