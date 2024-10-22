@@ -1,4 +1,5 @@
 #include "sorting.h"
+#include "array.h"
 #include "stdbool.h"
 #include "element.h"
 #include <stdio.h>
@@ -61,6 +62,13 @@ void selection_sort_rec(element* array, int n) {
     element_index min_idx = search_min(array, n);
     swap(&array[0], &array[min_idx]);
     selection_sort_rec(array + 1, n - 1);
+}
+
+void selection_sort(element* array, int n) {
+    for (int i = 0; i < n; i++) {
+        element_index min_idx = i + search_min(array + i, n - i);
+        swap(&array[i], &array[min_idx]);
+    }
 }
 
 element_index search_min(element* array, int n) {
