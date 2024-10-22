@@ -27,12 +27,7 @@ void insert_ordered(element* array, int n, element value) {
         return;
     }
 
-    if (n == 1) {
-        array[0] = value;
-        return;
-    }
-
-    element_index target_idx = 0;
+    element_index target_idx = -1;
     for (int i = n - 1; i >= 0; i--) {
         if (greater(array[i], value)) { continue; }
         target_idx = i;
@@ -44,6 +39,7 @@ void insert_ordered(element* array, int n, element value) {
     }
 
     array[target_idx + 1] = value;
+    array_print(array, n);
 }
 
 // PRE:
@@ -51,8 +47,8 @@ void insert_ordered(element* array, int n, element value) {
 // - the array is ordered
 // todo fix this :)
 void insertion_sort(element* array, int n) {
-    for (int i = 0; i < n; i++) {
-        insert_ordered(array, i + 1, array[i]);
+    for (int i = 1; i < n; i++) {
+        insert_ordered(array, i, array[i]);
     }
 }
 
