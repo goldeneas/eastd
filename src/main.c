@@ -3,9 +3,12 @@
 #include "element.h"
 
 int main() {
-    element array[] = { 2, 5, 6, 10, 21 };
-    insertion_sort(array, 5);
-    array_print(array, 5);
-    
+    linked_list list = linked_list_create();
+    list = linked_list_add(0, list);
+    list = linked_list_add(3, list);
+    list = linked_list_add(2, list);
+    list = linked_list_push_back(0, list);
+    linked_list_print(list);
+
     return 0;
 }

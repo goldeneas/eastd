@@ -1,9 +1,12 @@
 #include "linked_list.h"
+#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 struct node* node_create(element value) {
     struct node* node = malloc(sizeof(struct node));
+    assert(node != NULL);
+
     node->value = value;
     node->next = NULL;
 
@@ -11,6 +14,7 @@ struct node* node_create(element value) {
 }
 
 void node_destroy(struct node *node) {
+    if (node == NULL) { return; }
     free(node);
 }
 
@@ -23,7 +27,7 @@ void linked_list_destroy(linked_list list) {
 
     while (curr != NULL) {
         struct node* next = curr->next;
-        free(curr);
+        node_destroy(curr);
 
         curr = next;
     }
@@ -132,4 +136,22 @@ struct node* linked_list_search(element value, linked_list list) {
 
     printf("element {%i} not found!\n", value);
     return NULL;
+}
+
+linked_list linked_list_push_back(element value, linked_list list) {
+    struct node* node = node_create(value);
+
+    if (linked_list_is_empty(list)) {
+        return node;
+    }
+
+    struct node* curr = list;
+    struct node* next = curr->next;
+    while (next != NULL) {
+        curr = next;
+        next = next->next;
+    }
+
+    curr->next = node;
+    return list;
 }
