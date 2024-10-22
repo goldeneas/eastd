@@ -1,3 +1,6 @@
+#ifndef __LINKED_LIST_H
+#define __LINKED_LIST_H
+
 #include <stddef.h>
 #include <stdbool.h>
 #include "element.h"
@@ -19,3 +22,5 @@ bool linked_list_is_empty(linked_list list);
 
 struct node* node_create(element value);
 void node_destroy(struct node* node);
+
+#endif
