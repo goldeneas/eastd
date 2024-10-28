@@ -1,3 +1,4 @@
 ### Features:
 - linked lists
-- sorting algorithms (soon)
+- sorting algorithms
+- dynamic arrays
